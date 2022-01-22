@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Uectorly. | UI Prompt Generator</title>
+    <link rel="stylesheet" type="text/css" href="uectorly.css">
+    <link rel="icon" type="image/png" href="https://u.cubeupload.com/Shocked/6ebicon.png">
+    <script src="https://kit.fontawesome.com/97d1e46ae9.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="top"></div>
+    <div class="navbar">
+      <div class="navcontent">
+        <img src="https://u.cubeupload.com/Shocked/uectorly.png" height="70">
+        <div class="vertical-divider"></div>
+        <a href="#top"><h2 class="navlink">Home</h2></a>
+        <button class="navbutton" id="new-prompt" onclick="randomizer()">Get Lucky&nbsp; <i class="fas fa-random"></i></button>
+      </div>
+    </div>
+    <div class="nav"></div>
+    <script>
+      function randomizer() {
+        var promptArray = ['an analytics page', 'a search engine', 'a homepage', 'a settings page', 'a 404 page', 'a map UI', 'a checkout page', 'a popout menu'];
+        var audienceArray = ['fast-food restaurants', 'a travel app', 'Google', 'a smart home app', 'an online store', 'a website builder', 'a link shortener', 'an online learning website'];
+
+        var prompt = promptArray[Math.floor(Math.random() * promptArray.length)];
+        var audience = audienceArray[Math.floor(Math.random() * audienceArray.length)];
+
+        document.getElementById("design-prompt").innerHTML = prompt;
+        document.getElementById("design-audience").innerHTML = audience;
+      }
+    </script>
+    <div class="generator">
+      <br>
+      <br>
+      <div class="prompt"><h1>Design <span id="design-prompt">a prompt</span></h1></div>
+      <div class="audience"><h1>for <span id="design-audience">an audience<span></h1></div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <button class="navbutton" style="margin-left: 50px;" id="new-prompt-2" onclick="randomizer();">Get Lucky&nbsp; <i class="fas fa-random"></i></button>
+      <p style="margin-left: 50px;color: #808080;margin-top: 5px;">60+ combinations!</p>
+    </div>
+    <center>
+      <h1 style="margin-top: 70px;">What is Uectorly?</h1>
+      <br>
+      <p style="width: 500px;margin-bottom: 70px;">Uectorly is an online UI prompt generator. Feeling stumped on what to design for your next UI? Hit "New Prompt" and try one of the randomly generated design prompts! With 60+ prompt combinations, why not give it a try?</p>
+      <a href="#top"><button class="blackbutton" style="margin-bottom: 70px;" id="new-prompt" onclick="randomizer();">Generate a prompt</button></a>
+    </center>
+    <div class="footer">
+      <br>
+      <br>
+      <div class="prompt"><h1>Uectorly<span style="color: #9664FF;">.</span></h1></div>
+      <p class="footlink"><span style="color: #9664FF;">|</span> <a href="/" style="color: white;text-decoration: none;">HOME</a></p>
+      <p class="footlink"><span style="color: #9664FF;">|</span> <a href="#top" style="color: white;text-decoration: none;">GENERATE</a></p>
+      <br>
+      <br>
+      <p style="margin-left: 50px;color: #808080;">This site is no longer being maintained.</p>
+      <br>
+      <br>
+    </div>
+  </body>
+</html>
